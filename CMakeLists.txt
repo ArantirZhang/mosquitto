@@ -32,7 +32,7 @@ option(WITH_EC
 if (WITH_TLS)
 	# find_package(OpenSSL REQUIRED)
 	add_definitions("-DWITH_TLS")
-
+  set(OPENSSL_INCLUDE_DIR "${PROJECT_SOURCE_DIR}/../openssl-cmake/include")
 	if (WITH_TLS_PSK)
 		add_definitions("-DWITH_TLS_PSK")
 	endif (WITH_TLS_PSK)
