@@ -8,7 +8,7 @@ link_directories(${mosquitto_SOURCE_DIR}/lib)
 if (WITH_BUNDLED_DEPS)
         include_directories(${mosquitto_SOURCE_DIR} ${mosquitto_SOURCE_DIR}/src/deps)
 endif (WITH_BUNDLED_DEPS)
-
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wdeprecated-declarations -Wimplicit-function-declaration")
 set(C_SRC
 	actions.c
 	callbacks.c
