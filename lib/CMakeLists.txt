@@ -84,6 +84,7 @@ set_target_properties(libmosquitto PROPERTIES
 )
 
 target_link_libraries(libmosquitto ${LIBRARIES})
+target_include_directories(libmosquitto PUBLIC ${mosquitto_SOURCE_DIR}/lib ${mosquitto_SOURCE_DIR})
 
 set_target_properties(libmosquitto PROPERTIES
 	OUTPUT_NAME mosquitto
